@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/item_agregaCientifico"
+        android:title="Añadir Cientifico" />
+    <item
+        android:id="@+id/item_agregaPlanta"
+        android:title="Añadir Planta" />
+    <item
+        android:id="@+id/item_agregaRecoleccion"
+        android:title="Añadir Recoleccion" />
+</menu>
