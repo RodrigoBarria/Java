@@ -11,9 +11,29 @@ class Manejador_BD extends SQLiteOpenHelper {
     public String Tablas;
     private static final int VERSION_BASEDATOS = 1;
     private static final String NOMBRE_BASEDATOS = "ALMANAQUE.sqlite";
-    private static final String PLANTAS = "CREATE TABLE PLANTAS (COD INT PRIMARY KEY, NOMBREP TEXT, NOMBRECP TEXT, USOS TEXT, FOTOP BLOB)";
-    private static final String CIENTIFICO = "CREATE TABLE CIENTIFICO (RUTC INT PRIMARY KEY, NOMBRES TEXT, APELLIDOS TEXT, SEXO TEXT)";
-    private static final String RECOLECCION = "CREATE TABLE RECOLECCION (IDR INT PRIMARY KEY, FECHAREG INT, CODPR INT, RUTCR INT, COMENTARIO TEXT, FOTOR BLOB, LONGITUD REAL, LATITUD REAL)";
+    private static final String PLANTAS = "CREATE TABLE PLANTAS (" +
+            "IDP INT PRIMARY KEY AUTOINCREMENT," +
+            "CODP INT, " +
+            "NOMBREP TEXT, " +
+            "NOMBRECP TEXT, " +
+            "USOS TEXT, " +
+            "FOTOP BLOB)";
+    private static final String CIENTIFICO = "CREATE TABLE CIENTIFICO (" +
+            "ID INT PRIMARY KEY AUTOINCREMENT, " +
+            "RUTC TEXT NOT NULL, " +
+            "NOMBRES TEXT NOT NULL, " +
+            "APELLIDOS TEXT NOT NULL, " +
+            "SEXO TEXT NOT NULL)";
+    private static final String RECOLECCION = "CREATE TABLE RECOLECCION (" +
+            "IDR PRIMARY KEY AUTOINCREMENT," +
+            "IDREC INT, " +
+            "FECHAREG INT, " +
+            "CODPR INT, " +
+            "RUTCR INT, " +
+            "COMENTARIO TEXT, " +
+            "FOTOR BLOB, " +
+            "LONGITUD REAL, " +
+            "LATITUD REAL)";
 
     // Constructor BD
     public Manejador_BD(Context context) {
@@ -35,20 +55,20 @@ class Manejador_BD extends SQLiteOpenHelper {
 
 
     //--------------------------------METODO GRABAR REGISTRO PLANTA---------------------------------
-    public boolean Guarda_ImagenP(int cod, String nombrep, String nombrecp, String usos, byte[] fotop) {
+    public boolean Guarda_ImagenP(int codp, String nombrep, String nombrecp, String usos, byte[] fotop) {
         boolean sw1 = true;
         SQLiteDatabase db = getWritableDatabase(); //ABRE BASE DE DATOS EN MODO ESCRITURA
         if (db != null) {//SI LA BASE EXISTE
 
             ContentValues valores = new ContentValues();
-            valores.put("COD", cod);
+            valores.put("CODP", codp);
             valores.put("NOMBREP", nombrep);
             valores.put("NOMBRECP", nombrecp);
             valores.put("USOS", usos);
             valores.put("FOTOP", fotop);
 
             try {
-                db.insert("PLANTAS", "FOTOP", valores);
+                db.insert("PLANTAS", null, valores);
                 db.close();
             } catch (Exception e) {
                 db.close();
@@ -86,7 +106,8 @@ class Manejador_BD extends SQLiteOpenHelper {
     }
 
     //--------------------------------METODO GRABAR REGISTRO CIENTIFICO-----------------------------
-    public boolean Guarda_Cientifico(int rutc, String nombres, String apellidos, String sexo) {
+
+    public boolean Guarda_Cientifico(String rutc, String nombres, String apellidos, String sexo) {
         boolean sw = true;
         SQLiteDatabase db = getWritableDatabase(); //ABRE BASE DE DATOS EN MODO ESCRITURA
         if (db != null) {//SI LA BASE EXISTE
@@ -98,7 +119,7 @@ class Manejador_BD extends SQLiteOpenHelper {
             valores2.put("SEXO", sexo);
 
             try {
-                db.insert("CIENTIFICO", "RUTC", valores2);
+                db.insert("CIENTIFICO", null, valores2);
                 db.close();
             } catch (Exception e) {
                 db.close();

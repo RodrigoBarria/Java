@@ -14,6 +14,9 @@
         android:theme="@style/Theme.Certamen2RbarriaV4"
         tools:targetApi="31">
         <activity
+            android:name=".CientificoListar"
+            android:exported="false" />
+        <activity
             android:name=".Imagenplanta"
             android:exported="false" />
         <activity

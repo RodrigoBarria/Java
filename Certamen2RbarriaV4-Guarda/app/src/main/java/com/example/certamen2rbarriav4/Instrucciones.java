@@ -61,4 +61,8 @@ public class Instrucciones extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_instrucciones, container, false);
     }
+
+    public void volver(View view) {
+
+    }
 }

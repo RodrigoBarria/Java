@@ -4,13 +4,18 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/rodri/AndroidStudioProjects/Certamen2RbarriaV4/app/src/main/res/layout/activity_cientifico.xml" value="0.264" />
+        <entry key="..\:/Users/rodri/AndroidStudioProjects/Certamen2RbarriaV4/app/src/main/res/layout/activity_cientifico_listar.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/rodri/AndroidStudioProjects/Certamen2RbarriaV4/app/src/main/res/layout/activity_imagenplanta.xml" value="0.22826086956521738" />
-        <entry key="..\:/Users/rodri/AndroidStudioProjects/Certamen2RbarriaV4/app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="..\:/Users/rodri/AndroidStudioProjects/Certamen2RbarriaV4/app/src/main/res/layout/activity_planta.xml" value="0.2" />
+        <entry key="..\:/Users/rodri/AndroidStudioProjects/Certamen2RbarriaV4/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/rodri/AndroidStudioProjects/Certamen2RbarriaV4/app/src/main/res/layout/activity_planta.xml" value="0.264" />
         <entry key="..\:/Users/rodri/AndroidStudioProjects/Certamen2RbarriaV4/app/src/main/res/layout/activity_recoleccion.xml" value="0.1" />
         <entry key="..\:/Users/rodri/AndroidStudioProjects/Certamen2RbarriaV4/app/src/main/res/layout/cientifico.xml" value="0.1" />
         <entry key="..\:/Users/rodri/AndroidStudioProjects/Certamen2RbarriaV4/app/src/main/res/layout/fragment_instrucciones.xml" value="0.264" />
         <entry key="..\:/Users/rodri/AndroidStudioProjects/Certamen2RbarriaV4/app/src/main/res/menu/mimenu.xml" value="0.1" />
+        <entry key="..\:/android Roro/Java/Certamen2RbarriaV4/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/android Roro/Java/Certamen2RbarriaV4/app/src/main/res/layout/activity_planta.xml" value="0.17074275362318841" />
+        <entry key="..\:/android Roro/Java/Certamen2RbarriaV4/app/src/main/res/layout/fragment_instrucciones.xml" value="0.22" />
+        <entry key="..\:/android Roro/Java/Certamen2RbarriaV4/app/src/main/res/menu/mimenu.xml" value="0.1" />
       </map>
     </option>
   </component>

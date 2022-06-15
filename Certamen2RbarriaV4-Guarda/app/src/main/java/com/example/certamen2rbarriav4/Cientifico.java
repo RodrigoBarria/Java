@@ -25,25 +25,29 @@ public class Cientifico extends AppCompatActivity {
     }
     private void init() {
         Toast.makeText(this, "INICIALIZANDO", Toast.LENGTH_LONG).show();
-        tbxRut = (EditText) findViewById(R.id.tbxCodigoP);
+        tbxRut = (EditText) findViewById(R.id.tbxRut);
         tbxNombres = (EditText) findViewById(R.id.tbxNombres);
-        tbxApellidos = (EditText) findViewById(R.id.tbxNombreCP);
+        tbxApellidos = (EditText) findViewById(R.id.tbxApellidos);
         btnGrabar2 = (Button) findViewById(R.id.btnGuardarc);
         btnLimpiar2 = (Button) findViewById(R.id.btnLimpiarc);
+        rgrpSexoC = (RadioGroup) findViewById(R.id.rgrpSexoC);
         MDB = new Manejador_BD(this);
     }
 
     public void Grabarc (View v)
     {
-        int obtid3;
-        String obtdet10, obtdet11, obtdet12;
+        //int obtid3;
+        String obtdet10;
+        String obtdet11;
+        String obtdet12;
+        String obtdet13;
         boolean siGrabo;
-        obtid3 = Integer.parseInt(tbxRut.getText().toString());
-        obtdet10 = tbxNombres.getText().toString();
-        obtdet11 = tbxApellidos.getText().toString();
-        obtdet12 = rgrpSexoC.toString();
+        obtdet10 = tbxRut.getText().toString();
+        obtdet11 = tbxNombres.getText().toString();
+        obtdet12 = tbxApellidos.getText().toString();
+        obtdet13 = rgrpSexoC.toString();
 
-        siGrabo = MDB.Guarda_Cientifico(obtid3, obtdet10, obtdet11, obtdet12);
+        siGrabo = MDB.Guarda_Cientifico(obtdet10, obtdet11, obtdet12, obtdet13);
         if (siGrabo) {
             Toast.makeText(this, "GRABO", Toast.LENGTH_LONG).show();
         } else {
