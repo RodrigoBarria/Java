@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MENÚ</string>
+    <string name="regCient">Registrar Científico</string>
+    <string name="regPlant">Registrar Planta</string>
+    <string name="regRec">Registrar Recolección</string>
+    <string name="exit">Salir</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
